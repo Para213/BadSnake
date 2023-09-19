@@ -42,8 +42,8 @@ while game_is_on:
         game_is_on = False
 
 
-    for segment in snake.segments:
-        if snake.head.distance(segment) < 10 and segment != snake.head:
+    for segment in snake.segments[1:]:
+        if snake.head.distance(segment) < 10:
             game_is_on = False
 
 snake.endSnake()

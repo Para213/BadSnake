@@ -27,6 +27,13 @@ class Snake:
         new_turtle.goto(self.segments[-1].pos())
         self.segments.append(new_turtle)
 
+    def reset(self):
+        for seg in self.segments:
+            seg.goto(1000,1000)
+        self.segments.clear()
+        self.createSnake()
+        self.head = self.segments[0]
+
     def endSnake(self):
         for segment in self.segments:
             segment.hideturtle()
